@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +14,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $isLogin  =   false;
+    if(Auth::check()){
+        $isLogin    =   true;
+    }
+    
+    return view('welcome',compact('isLogin'));
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
