@@ -14,14 +14,9 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+## 4 Steps to get login authentication:
+1. Create new laravel project
+2. Configure db connection in .env file
+3. php artisan migrate        ( It will automatic generate user table, password_reset and migration table to db)
+4. php artisan make:auth      ( it will automatic generate views, controller, middleware for us)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
